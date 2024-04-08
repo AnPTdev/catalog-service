@@ -1,0 +1,17 @@
+version: '3.7'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: catalog
+      POSTGRES_USER: ddl
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD","pg_isready","-q","-d","catalog","-U","ddl"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
