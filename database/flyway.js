@@ -1,7 +1,7 @@
 module.exports = function() {
     return {
         flywayArgs: {
-            url: 'jdbc:postgresql://0.0.0.0:5432/catalog',
+            url: 'jdbc:postgresql://localhost:5432/catalog',
             schemas: 'public',
             locations: 'filesystem:../database/sql',
             user: 'ddl',

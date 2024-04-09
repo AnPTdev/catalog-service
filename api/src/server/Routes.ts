@@ -7,6 +7,6 @@ export enum Routes {
 }
 
 export const setupRoutes = (app: Express) =>{
-    app.use(Routes.HEALTH,getHealth)
+    app.get(Routes.HEALTH,getHealth)
     app.use(Routes.CATEGORY,Category)
 }
