@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="116af502-9a6c-4b64-ac83-0beaeadba029" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/server/utils/Validations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/server/DatabaseHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/server/DatabaseHelper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/server/Routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/server/Routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/server/ServerHelper.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/server/ServerHelper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/server/controllers/CategoryController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/server/controllers/CategoryController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,7 +150,7 @@
       <option name="presentableId" value="Default" />
       <updated>1712154021364</updated>
       <workItem from="1712154022391" duration="21392000" />
-      <workItem from="1712668850914" duration="4075000" />
+      <workItem from="1712668850914" duration="4183000" />
     </task>
     <servers />
   </component>
