@@ -19,6 +19,7 @@ const startHTTP = async (expressApp : Express) =>{
 
 const setupServer = async (): Promise<Express> => {
     const expressApp = setupExpress();
+    expressApp.use(express.json());
     setupRoutes(expressApp);
     return expressApp;
 }
