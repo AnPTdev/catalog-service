@@ -4,6 +4,14 @@ import { setupPrismaClient } from "./DatabaseHelper";
 
 const setupExpress = () => express()
 
+export const startServer = async () => {
+    console.info("Starting up server");
+    await setupPrismaClient()
+    const app = await setupServer();
+    await startHTTP(app)
+    return app;
+}
+
 const startHTTP = async (expressApp : Express) =>{
     console.info(`Starting express server for local env`);
 
@@ -18,16 +26,10 @@ const startHTTP = async (expressApp : Express) =>{
 }
 
 const setupServer = async (): Promise<Express> => {
+    console.info("Setting up server")
     const expressApp = setupExpress();
     expressApp.use(express.json());
     setupRoutes(expressApp);
     return expressApp;
 }
 
-export const startServer = async () => {
-    console.info("Starting up server");
-    const app = await setupServer();
-    await startHTTP(app)
-    await setupPrismaClient()
-    return app;
-}

@@ -6,8 +6,8 @@
   "scripts": {
     "start": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
     "build": "tsc",
-    "migrate": "flyway -c ../database/flyway.js migrate && npx prisma db pull",
-    "start:local": "docker-compose -f docker-compose.yml up -d && yarn migrate && yarn start"
+    "migrate": "flyway -c../database/flyway.js migrate && npx prisma db pull",
+    "start:local": "docker-compose -f docker-compose.yml up -d && yarn start"
   },
   "keywords": [],
   "author": "",

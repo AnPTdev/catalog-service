@@ -1,27 +1,29 @@
-import {Request, Response} from "express";
+import { Request, Response } from "express";
 import express from "express";
-import {validatePostRequest} from "../utils/Validations";
+import { validatePostRequest } from "../utils/Validations";
+import { createCategory, getCategory } from "../services/CategoryService";
 
-export const Category = express.Router()
+export const Category = express.Router();
 
 const validateCreateCategoryRequest = (req: Request): void => {
-    validatePostRequest(req);
+  validatePostRequest(req);
 
-    if (!req.body.name) {
-        throw new Error("Error Validating: Category Name")
-    }
-}
+  if (!req.body.name) {
+    throw new Error("Error Validating: Category Name");
+  }
+};
 
+Category.get("/", async (req: Request, res: Response) => {
+  const result = await getCategory();
 
-Category.get('/', (req: Request, res: Response) => {
-    res.send('category')
-})
+  res.status(200).json(result);
 
-Category.post('/', (req: Request, res: Response) => {
-    console.log(req.body)
-    validateCreateCategoryRequest(req)
+});
 
-    res.status(200);
-    res.json(req.body)
-})
+Category.post("/", async (req: Request, res: Response) => {
+  validateCreateCategoryRequest(req);
+  console.info("HAHAHA"+ req.body)
+  const result = await createCategory(req.body.name);
 
+  res.status(200).json(result);
+});
